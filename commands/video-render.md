@@ -1,3 +1,8 @@
+---
+description: Render video to MP4 or other formats
+argument-hint: [options]
+---
+
 # Render Final Video
 
 Render your Remotion video project to a final MP4 file.

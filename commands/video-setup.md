@@ -1,3 +1,7 @@
+---
+description: Configure TTS, recording, and video generation preferences
+---
+
 # Video Studio Setup
 
 Configure your Remotion Video Studio preferences for TTS, recording, and video generation.

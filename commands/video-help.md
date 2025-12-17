@@ -1,3 +1,7 @@
+---
+description: Show all video commands, workflows, and documentation
+---
+
 # Video Studio Help
 
 Complete guide to all Remotion Video Studio commands and features.

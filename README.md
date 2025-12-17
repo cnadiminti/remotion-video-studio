@@ -31,7 +31,7 @@ Complete video creation toolkit for Claude Code with Remotion, featuring multipl
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/remotion-video-studio.git
+git clone https://github.com/cnadiminti/remotion-video-studio.git
 cd remotion-video-studio
 
 # Install in Claude Code plugins directory
@@ -354,8 +354,8 @@ MIT License - see [LICENSE](LICENSE) file
 
 ## 🆘 Support
 
-- Issues: [GitHub Issues](https://github.com/your-username/remotion-video-studio/issues)
-- Discussions: [GitHub Discussions](https://github.com/your-username/remotion-video-studio/discussions)
+- Issues: [GitHub Issues](https://github.com/cnadiminti/remotion-video-studio/issues)
+- Discussions: [GitHub Discussions](https://github.com/cnadiminti/remotion-video-studio/discussions)
 - Email: support@example.com
 
 ## 🙏 Acknowledgments

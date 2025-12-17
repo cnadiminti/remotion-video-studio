@@ -1,3 +1,8 @@
+---
+description: Configure screen and webcam recording with Remotion Recorder
+argument-hint: [options]
+---
+
 # Set Up Screen Recording
 
 Configure and initiate screen recording using Remotion Recorder for video capture with webcam.

@@ -1,3 +1,8 @@
+---
+description: Create a new Remotion video project with TTS and animations
+argument-hint: [description]
+---
+
 # Create New Remotion Video
 
 Create a new Remotion video project with intelligent setup and configuration.

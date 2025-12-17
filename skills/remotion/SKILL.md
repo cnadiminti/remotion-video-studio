@@ -1,3 +1,8 @@
+---
+name: remotion
+description: Remotion framework expertise for React-based programmatic video creation. Use when working with video compositions, animations, frame timing, audio synchronization, or video rendering.
+---
+
 # Remotion Video Framework Skill
 
 Deep expertise in creating programmatic videos with Remotion framework.

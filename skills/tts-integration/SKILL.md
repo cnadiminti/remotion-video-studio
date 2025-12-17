@@ -1,3 +1,8 @@
+---
+name: tts-integration
+description: Multi-provider Text-to-Speech integration for video narration. Use when working with voiceovers, Mac TTS, Google Cloud TTS, Azure TTS, ElevenLabs, or audio generation for videos.
+---
+
 # Text-to-Speech Integration Skill
 
 Expert knowledge in integrating multiple TTS providers with Remotion for video narration.

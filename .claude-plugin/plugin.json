@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "Complete video creation toolkit for Remotion with TTS, screen recording, and AI-powered generation",
   "author": {
-    "name": "Community",
-    "url": "https://github.com/your-username/remotion-video-studio"
+    "name": "Chandra Nadiminti",
+    "email": "8633814+cnadiminti@users.noreply.github.com",
+    "url": "https://github.com/cnadiminti"
   },
+  "homepage": "https://github.com/cnadiminti/remotion-video-studio#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/remotion-video-studio"
+    "url": "https://github.com/cnadiminti/remotion-video-studio"
   },
   "license": "MIT",
   "keywords": [

@@ -1,3 +1,8 @@
+---
+description: Add or replace voiceover using Text-to-Speech
+argument-hint: [script]
+---
+
 # Add Voice to Existing Video
 
 Add or replace voiceover in an existing Remotion video project using Text-to-Speech.
