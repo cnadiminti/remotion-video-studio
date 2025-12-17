@@ -1,0 +1,30 @@
+{
+  "name": "remotion-video-studio",
+  "version": "1.0.0",
+  "description": "Complete video creation toolkit for Remotion with TTS, screen recording, and AI-powered generation",
+  "author": {
+    "name": "Community",
+    "url": "https://github.com/your-username/remotion-video-studio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/remotion-video-studio"
+  },
+  "license": "MIT",
+  "keywords": [
+    "remotion",
+    "video",
+    "tts",
+    "text-to-speech",
+    "screen-recording",
+    "elevenlabs",
+    "google-tts",
+    "azure-tts"
+  ],
+  "engines": {
+    "claude-code": ">=2.0.0"
+  },
+  "dependencies": {
+    "node": ">=18.0.0"
+  }
+}
