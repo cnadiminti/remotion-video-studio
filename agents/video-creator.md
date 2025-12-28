@@ -133,23 +133,23 @@ Ask clarifying questions about:
 
 ### Audio-Synced Text Animation
 ```tsx
-import { useCurrentFrame, useVideoConfig, interpolate } from 'remotion';
+import { useCurrentFrame, useVideoConfig, interpolate, staticFile } from 'remotion';
 
-export const SyncedText: React.FC<{ 
-  text: string; 
-  startFrame: number; 
+export const SyncedText: React.FC<{
+  text: string;
+  startFrame: number;
   duration: number;
 }> = ({ text, startFrame, duration }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  
+
   const opacity = interpolate(
     frame,
     [startFrame, startFrame + 10],
     [0, 1],
     { extrapolateRight: 'clamp' }
   );
-  
+
   return (
     <div style={{ opacity }}>
       {text}
@@ -160,18 +160,23 @@ export const SyncedText: React.FC<{
 
 ### Scene Transitions
 ```tsx
-import { spring } from 'remotion';
+import { spring, useCurrentFrame, useVideoConfig } from 'remotion';
 
+const frame = useCurrentFrame();
+const { fps } = useVideoConfig();
+
+// High damping (100) for smooth, non-bouncy transitions
+// Use default (10) for bouncy spring effect
 const transitionProgress = spring({
   frame: frame - sceneStart,
   fps,
-  config: { damping: 100 }
+  config: { damping: 100, stiffness: 100 }
 });
 ```
 
 ### Multi-Segment Audio
 ```tsx
-import { Audio, Sequence } from 'remotion';
+import { Sequence, staticFile, Audio } from 'remotion';
 
 export const Narration: React.FC = () => {
   return (

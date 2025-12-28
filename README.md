@@ -2,6 +2,25 @@
 
 A production-ready Claude Code plugin for creating professional videos using Remotion framework with multi-provider Text-to-Speech integration.
 
+## ⚡ Quick Start
+
+**Install in 2 steps:**
+```bash
+# 1. Add marketplace
+/plugin marketplace add cnadiminti/remotion-video-studio
+
+# 2. Install plugin
+/plugin install remotion-video-studio@remotion-video-studio
+```
+
+**Start creating:**
+```bash
+/video-setup          # Configure TTS
+/video-new "My video" # Create project
+```
+
+📖 See [Installation](#-installation) for detailed setup instructions.
+
 ## 🎯 Vision
 
 Enable video creation directly from Claude Code by combining:
@@ -59,36 +78,22 @@ remotion-video-studio/
 └── README.md                # This file
 ```
 
-## 🚀 Setup
-
-### Prerequisites
-- Claude Code >=2.0.0
-- Node.js >=18.0.0 (for generated Remotion projects)
-- Git
-
-### Installation
+## 🚀 Installation
 
 ```bash
-# Clone repository
-git clone https://github.com/cnadiminti/remotion-video-studio.git
-cd remotion-video-studio
+# Add marketplace
+/plugin marketplace add cnadiminti/remotion-video-studio
 
-# Explore structure
-ls -la commands/     # View command definitions
-cat CLAUDE.md        # Read development guidance
+# Install plugin
+/plugin install remotion-video-studio@remotion-video-studio
+
+# Verify
+/video-help
 ```
 
-### Testing Locally
+**Prerequisites:** Claude Code >=1.0.33, Node.js >=18.0.0
 
-To test the plugin locally with Claude Code:
-
-```bash
-# Link to Claude Code plugins directory (if supported)
-ln -s $(pwd) ~/.claude/plugins/remotion-video-studio
-
-# Or manually copy
-cp -r . ~/.claude/plugins/remotion-video-studio
-```
+**Management:** Use `/plugin` for updates, disable/enable, or uninstall. See [Claude Code plugin docs](https://docs.claude.com/plugins) for details.
 
 ## 📚 Command Overview
 
@@ -170,49 +175,11 @@ cp -r . ~/.claude/plugins/remotion-video-studio
 
 ## 🤝 Contributing
 
-Contributions welcome!
+Contributions welcome! Fork, create a feature branch, make changes, and submit a PR.
 
-### How to Contribute
+**Enhancement Ideas:** Video templates, editing commands, advanced TTS features, automation workflows
 
-1. **Fork the repository**
-2. **Create feature branch**
-   ```bash
-   git checkout -b feature/command-implementation
-   ```
-3. **Make changes**
-   - Add/update command definitions
-   - Enhance skills documentation
-   - Improve agent workflows
-4. **Commit with clear messages**
-   ```bash
-   git commit -m "Add video-edit command definition"
-   ```
-5. **Push and create PR**
-   ```bash
-   git push origin feature/command-implementation
-   ```
-
-### Enhancement Priorities
-
-1. **Template Library**
-   - Pre-built video templates
-   - Industry-specific layouts
-   - Reusable component library
-
-2. **Advanced TTS Features**
-   - Voice cloning workflows
-   - SSML support
-   - Multi-language optimization
-
-3. **Editing Commands**
-   - Scene editing (/video-edit)
-   - Component library (/video-add-scene)
-   - Style themes (/video-themes)
-
-4. **Automation & Integration**
-   - CI/CD pipeline examples
-   - Batch rendering scripts
-   - API integration patterns
+See [CLAUDE.md](CLAUDE.md) for development guidance.
 
 ## 📖 Documentation
 
