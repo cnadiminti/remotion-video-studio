@@ -8,10 +8,7 @@
     "url": "https://github.com/cnadiminti"
   },
   "homepage": "https://github.com/cnadiminti/remotion-video-studio#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cnadiminti/remotion-video-studio"
-  },
+  "repository": "https://github.com/cnadiminti/remotion-video-studio",
   "license": "MIT",
   "keywords": [
     "remotion",
@@ -23,10 +20,12 @@
     "google-tts",
     "azure-tts"
   ],
-  "engines": {
-    "claude-code": ">=2.0.0"
-  },
-  "dependencies": {
-    "node": ">=18.0.0"
+  "mcpServers": {
+    "remotion-documentation": {
+      "command": "npx",
+      "args": [
+        "@remotion/mcp@latest"
+      ]
+    }
   }
 }

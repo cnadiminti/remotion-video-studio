@@ -1,214 +1,93 @@
 ---
 description: Show all video commands, workflows, and documentation
+argument-hint: none
 ---
 
-# Video Studio Help
+# Remotion Video Studio - Help
 
-Complete guide to all Remotion Video Studio commands and features.
+**Version**: 1.0.0
+**Status**: Production Ready
 
-## Quick Start
+Complete guide to Remotion Video Studio commands and workflows.
 
-New to video creation? Start here:
+## 🚀 Quick Start
 
-1. **Setup**: `/video-setup` - Configure TTS and preferences
-2. **Create**: `/video-new "My first video"` - Create your first video
-3. **Preview**: `npm run dev` - View in browser
-4. **Render**: `/video-render` - Export final MP4
+New to video creation? Start with these steps:
 
-## All Commands
+1. **Setup**: `/video-setup` - Configure TTS provider and preferences
+2. **Create**: `/video-new "My first video"` - Create your first video project
+3. **Add Voice**: `/video-add-voice "Your script here"` - Add voiceover
+4. **Preview**: Run `npm run dev` in your project directory
+5. **Render**: `/video-render` - Export final MP4
 
-### 🎬 Core Commands
+## 📚 Available Commands
 
-**`/video-setup`**
-Configure your video studio environment
-- Choose TTS provider (Mac/Google/Azure/ElevenLabs)
-- Set API keys
-- Configure default video settings
-- Test your setup
-
-**`/video-new [description] [options]`**
-Create a new Remotion video project
-- Options: `--type`, `--length`, `--tts`, `--resolution`
-- Generates project structure
-- Sets up TTS integration
-- Creates initial scenes
-- Starts dev server
-
-Example:
-```bash
-/video-new "Product demo for SaaS app"
-/video-new --type=marketing --length=30s --tts=elevenlabs "Quick intro"
-```
+### Core Commands
 
 **`/video-help`**
-Show this help message
+Show this help documentation with all commands and workflows.
 
-### 🎙️ Voice & Audio
+**`/video-setup`**
+Configure your video studio environment:
+- Choose TTS provider (Mac TTS, Google Cloud, Azure, ElevenLabs)
+- Set API keys for cloud providers
+- Configure default video settings (resolution, fps, duration)
+- Test your configuration
+
+**`/video-new [description] [options]`**
+Create a new Remotion video project:
+- **Arguments**: Brief description of your video
+- **Options**: `--type=<type>`, `--length=<duration>`, `--tts=<provider>`, `--resolution=<res>`
+- **Types**: marketing, tutorial, social, educational, demo
+- **Example**: `/video-new --type=marketing --length=60s "Product demo video"`
 
 **`/video-add-voice [script] [options]`**
-Add or replace voiceover using TTS
-- Options: `--provider`, `--voice`, `--scene`, `--file`
-- Generates audio files
-- Syncs with video timing
-- Updates compositions
-
-Example:
-```bash
-/video-add-voice "Welcome to our product. This video shows..."
-/video-add-voice --voice=Rachel --provider=elevenlabs --file=script.txt
-```
-
-**`/video-voices [provider]`**
-List available voices for TTS provider
-- Shows all voices with descriptions
-- Preview voice samples
-- Shows pricing for provider
-
-**`/video-test-voice [provider] [voice]`**
-Test a specific TTS voice
-- Generates "Hello World" sample
-- Plays audio preview
-- Shows voice characteristics
-
-### 📹 Recording
-
-**`/video-record-setup [options]`**
-Set up screen and webcam recording
-- Options: `--screen-only`, `--webcam-only`, `--quality`
-- Configures Remotion Recorder
-- Sets up OBS virtual camera (optional)
-- Starts recording interface
-
-**`/video-edit-recording`**
-Customize recorded video layout
-- Adjust webcam position/size
-- Add overlays and branding
-- Sync multiple recordings
-- Add transitions
-
-### ✏️ Editing
-
-**`/video-edit [scene-name]`**
-Edit existing video scene
-- Modify scene content
-- Update timing
-- Change transitions
-- Add effects
-
-**`/video-add-scene [type]`**
-Add new scene to video
-- Scene types: intro, main, outro, transition
-- Generates scene component
-- Updates composition
-- Inserts at specified position
-
-**`/video-add-captions [options]`**
-Generate and add captions/subtitles
-- Options: `--language`, `--style`, `--position`
-- Auto-generates from audio
-- Editable timing and text
-- Customizable styling
-
-**`/video-add-music [file]`**
-Add background music to video
-- Import audio file
-- Set volume levels
-- Loop or single play
-- Fade in/out
-
-### 🎨 Templates & Themes
-
-**`/video-use-template [template-name]`**
-Apply video template
-- Templates: marketing, tutorial, social, minimal
-- Pre-designed layouts
-- Color schemes
-- Animation patterns
-
-**`/video-themes`**
-List available themes and styles
-- Color schemes
-- Font pairings
-- Animation styles
-- Layout templates
-
-### 🚀 Rendering & Export
+Add or replace voiceover using TTS:
+- **Arguments**: Your script text or `--file=path/to/script.txt`
+- **Options**: `--provider=<provider>`, `--voice=<voice-name>`, `--scene=<scene-name>`
+- **Example**: `/video-add-voice --voice=Zoe "Welcome to our product demo"`
 
 **`/video-render [options]`**
-Render final video to MP4
-- Options: `--quality`, `--format`, `--output`
-- Renders at specified quality
-- Shows progress
-- Outputs to file
+Render final video to MP4:
+- **Options**: `--quality=<low|medium|high>`, `--output=<filepath>`, `--format=<mp4|webm>`
+- **Example**: `/video-render --quality=high --output=./final.mp4`
 
-Example:
-```bash
-/video-render --quality=high --output=./final-video.mp4
-```
+**`/video-record-setup [options]`**
+Set up screen and webcam recording:
+- **Options**: `--screen-only`, `--webcam-only`, `--quality=<720p|1080p|4K>`
+- Configures Remotion Recorder for capturing content
+- **Example**: `/video-record-setup --quality=1080p`
 
-**`/video-preview`**
-Start development preview server
-- Opens at http://localhost:3000
-- Hot reload enabled
-- Real-time updates
+### Planned Commands
 
-### ⚙️ Configuration
+The following commands are planned for future releases:
 
-**`/video-config [key] [value]`**
-Update video configuration
-- View current config (no args)
-- Set specific values
-- Reset to defaults
+- `/video-edit [scene]` - Edit existing scene
+- `/video-add-scene [type]` - Add new scene
+- `/video-add-captions` - Generate subtitles
+- `/video-add-music [file]` - Add background music
+- `/video-voices [provider]` - List available voices
+- `/video-test-voice [provider] [voice]` - Test TTS voice
+- `/video-use-template [name]` - Apply video template
+- `/video-themes` - List available themes
+- `/video-config [key] [value]` - Update settings
+- `/video-api-keys` - Manage API keys
 
-Example:
-```bash
-/video-config tts.defaultProvider elevenlabs
-/video-config video.fps 60
-/video-config --reset
-```
+## 💰 TTS Provider Comparison
 
-**`/video-api-keys`**
-Manage API keys for TTS providers
-- Add new keys
-- Test existing keys
-- Remove keys
-- Show usage stats
+Choose the right TTS provider for your needs:
 
-### 🔧 Utilities
-
-**`/video-analyze`**
-Analyze current video project
-- Show scene breakdown
-- Calculate total duration
-- List assets used
-- Estimate render time
-
-**`/video-optimize`**
-Optimize video assets
-- Compress images
-- Optimize audio files
-- Reduce bundle size
-- Improve render speed
-
-**`/video-export-script`**
-Export video script and timing
-- Generates markdown transcript
-- Includes timestamps
-- Shows scene breakdown
-- Useful for documentation
-
-## TTS Provider Comparison
-
-### Mac TTS (Built-in)
+### Mac TTS (Built-in) ✅ **Recommended for Testing**
 - **Cost**: FREE
 - **Quality**: Good (7/10)
-- **Setup**: Zero configuration
+- **Setup**: Zero configuration needed
 - **Best for**: Testing, internal videos, budget projects
-- **Voices**: 20+ including Siri voices
+- **Voices**: 20+ including Zoe, Samantha, Alex, Daniel
 - **Languages**: 40+
+- **No API key required**
 
 ### Google Cloud TTS
-- **Cost**: $4 per 1M characters (~$0.004/1K)
+- **Cost**: $4 per 1M characters (~$0.004 per 1K)
 - **Quality**: Very Good (8/10)
 - **Setup**: Google Cloud account + API key
 - **Best for**: Production videos, cost-effective scaling
@@ -216,7 +95,7 @@ Export video script and timing
 - **Languages**: 40+
 
 ### Azure TTS
-- **Cost**: $16 per 1M characters (~$0.016/1K)
+- **Cost**: $16 per 1M characters (~$0.016 per 1K)
 - **Quality**: Very Good (8/10)
 - **Setup**: Azure account + API key
 - **Best for**: Enterprise, Microsoft ecosystem
@@ -224,152 +103,183 @@ Export video script and timing
 - **Languages**: 75+
 
 ### ElevenLabs
-- **Cost**: $5-99/month or ~$0.20/1K chars via API
+- **Cost**: $5-99/month or ~$0.20 per 1K chars via API
 - **Quality**: Excellent (10/10)
 - **Setup**: ElevenLabs account + API key
 - **Best for**: Premium content, voice cloning, maximum realism
-- **Voices**: 100+ plus custom clones
+- **Voices**: 100+ plus unlimited custom voice clones
 - **Languages**: 29+
-- **Special**: Voice cloning, emotional control
+- **Special Features**: Voice cloning, emotional control, consistency
 
-## Common Workflows
+**💡 Recommendation**: Start with Mac TTS (free) for testing, then upgrade to Google Cloud for production or ElevenLabs for premium quality.
 
-### Creating a Marketing Video
+## 🎬 Common Workflows
+
+### 1. Marketing Video (60 seconds)
+
 ```bash
-# 1. Set up (first time only)
+# First time setup
 /video-setup
+# Choose: Mac TTS, voice: Zoe, defaults for video settings
 
-# 2. Create project
-/video-new --type=marketing --length=60s "Product demo"
+# Create marketing video
+/video-new --type=marketing --length=60s "Product demo for SaaS platform"
 
-# 3. Add voiceover
-/video-add-voice --provider=elevenlabs "Our product revolutionizes..."
+# Add voiceover with your script
+/video-add-voice "Welcome to our revolutionary SaaS platform.
+In just 60 seconds, we'll show you how we help businesses..."
 
-# 4. Customize scenes
-/video-edit intro
-/video-add-scene outro
-
-# 5. Preview
+# Preview in browser
+cd product-demo-for-saas-platform
 npm run dev
+# Opens at http://localhost:3000
 
-# 6. Render
-/video-render --quality=high
+# Make edits to scenes in src/scenes/
+# Refresh browser to see changes
+
+# Render final video
+/video-render --quality=high --output=./product-demo.mp4
 ```
 
-### Creating a Tutorial with Screen Recording
+### 2. Tutorial with Screen Recording
+
 ```bash
-# 1. Set up recording
+# Set up screen recording
 /video-record-setup --quality=1080p
 
-# 2. Record content
-# Use Remotion Recorder interface
+# Record your screen
+# Follow prompts to start Remotion Recorder
 
-# 3. Add additional narration
-/video-add-voice --scene=intro "Welcome to this tutorial"
+# Add intro narration
+/video-add-voice --scene=intro "Welcome to this tutorial on using our platform"
 
-# 4. Add captions
-/video-add-captions
+# Preview and adjust
+npm run dev
 
-# 5. Render
+# Render
 /video-render
 ```
 
-### Creating Social Media Content
+### 3. Social Media Short (15 seconds)
+
 ```bash
-# 1. Create short-form video
-/video-new --type=social --length=15s --resolution=1080x1920 "Quick tip"
+# Create vertical video for social
+/video-new --type=social --length=15s --resolution=1080x1920 "Quick productivity tip"
 
-# 2. Use template
-/video-use-template social-portrait
+# Add voice
+/video-add-voice --provider=google "Here's a quick tip to boost your productivity"
 
-# 3. Add voice
-/video-add-voice --provider=google "Here's a quick tip..."
+# Preview
+npm run dev
 
-# 4. Add captions (crucial for social)
-/video-add-captions --position=bottom
-
-# 5. Render
-/video-render --format=mp4
+# Render for social media
+/video-render --format=mp4 --output=./social-tip.mp4
 ```
 
-## Tips & Best Practices
+## 💡 Tips & Best Practices
 
-### 💡 General Tips
-- Always preview before rendering (saves time)
-- Use version control for video projects
-- Keep script files for future edits
-- Test TTS voices before full generation
-- Use templates for consistency
+### Getting Started
+- **Start simple**: Use Mac TTS for your first video to avoid API setup
+- **Test voices**: Try different voices to find what matches your brand
+- **Preview often**: Run `npm run dev` frequently to see your changes
+- **Keep scripts short**: Break long content into multiple segments
 
-### 🎙️ TTS Tips
-- Mac TTS: Use "Zoe" or "Samantha" for best quality
-- Add pauses with "..." or "<break time='1s'/>" (SSML)
-- Test pronunciation of technical terms
-- Consider voice cloning for brand consistency
-- Use lower tiers for drafts, premium for finals
+### TTS Optimization
+- **Mac TTS best voices**: Zoe, Samantha, Alex (US English)
+- **Add natural pauses**: Use "..." or commas in your script
+- **Avoid acronyms**: Spell them out or use proper punctuation
+- **Test pronunciation**: Preview audio before full render
+- **Consider voice consistency**: Use same voice across video series
 
-### 🎬 Video Tips
-- Keep marketing videos under 90s
-- Use 30fps for standard content, 60fps for motion-heavy
-- Optimize images before importing
-- Use consistent branding across scenes
-- Add subtle transitions between scenes
+### Video Production
+- **Resolution**:
+  - 1080p (1920x1080): Standard for YouTube, web
+  - 720p (1280x720): Faster rendering, smaller files
+  - Portrait (1080x1920): TikTok, Instagram Reels, Stories
+- **Frame Rate**:
+  - 30fps: Standard for most content
+  - 60fps: Smooth animations, gaming content
+- **Duration**:
+  - Marketing: 30-90 seconds
+  - Tutorials: 2-5 minutes
+  - Social: 15-60 seconds
 
-### 🚀 Performance Tips
-- Use `.claude/` directory for project settings
-- Enable caching for faster renders
-- Optimize assets with `/video-optimize`
-- Use lower quality for previews
-- Batch render multiple versions
+### Performance
+- **Optimize images**: Compress before importing (use WebP format)
+- **Use version control**: Track your video projects with git
+- **Save scripts**: Keep script files for future edits
+- **Cache audio**: Generated TTS files are reused automatically
 
-## Troubleshooting
+## 🛠️ Troubleshooting
 
-### Common Issues
+### "Command not found"
+Make sure the plugin is installed correctly. Check `/help` to see if video commands appear.
 
-**"API key not found"**
-- Run `/video-api-keys` to set up keys
-- Check `.env` file exists
-- Verify environment variables loaded
+### "API key not found"
+For cloud TTS providers:
+1. Create `.env` file in your project root
+2. Add your API key (see Environment Variables below)
+3. Restart your terminal/IDE
 
-**"Remotion not installed"**
-- Run `npm install remotion @remotion/cli`
-- Check Node.js version (>=18)
-- Delete node_modules and reinstall
+### "Remotion not installed"
+After running `/video-new`, you need to install dependencies:
+```bash
+cd your-video-project
+npm install
+```
 
-**"Audio not syncing"**
-- Check frame rate consistency
-- Verify audio file format (prefer MP3/AAC)
-- Use `/video-analyze` to check timing
-- Adjust in `src/utils/audio-sync.ts`
+### "Audio not syncing"
+- Check that audio files are in `public/audio/` directory
+- Verify frame rate is consistent (usually 30fps)
+- Review timing calculations in generated composition
 
-**"Render failed"**
-- Check disk space
-- Verify all assets exist
-- Review console for errors
-- Try lower quality setting
+### "Render failed"
+- Check available disk space
+- Verify all asset files exist
+- Review error message in console
+- Try rendering at lower quality first
 
-**"Can't access camera/microphone"**
-- Grant browser permissions
-- Check system privacy settings
-- Restart browser
-- Try different browser
+## 📂 Project Structure
 
-### Getting Help
+When you run `/video-new`, you'll get this structure:
 
-- Documentation: [Include link to docs]
-- Examples: [Include link to examples repo]
-- Community: [Include link to Discord/forum]
-- Issues: [Include link to GitHub issues]
+```
+my-video-project/
+├── .claude/
+│   ├── video-config.json    # Your plugin settings
+│   └── CLAUDE.md             # Remotion development guide
+├── public/
+│   ├── audio/                # Generated TTS audio files
+│   └── assets/               # Images, logos, etc.
+├── src/
+│   ├── Root.tsx              # Composition registry
+│   ├── Composition.tsx       # Main video component
+│   ├── scenes/               # Individual scenes
+│   │   ├── Intro.tsx
+│   │   ├── Main.tsx
+│   │   └── Outro.tsx
+│   ├── components/           # Reusable components
+│   │   ├── Title.tsx
+│   │   └── Text.tsx
+│   └── utils/                # Utility functions
+│       ├── tts-mac.ts        # TTS generation
+│       └── audio-timing.ts   # Frame calculations
+├── .env                      # API keys (never commit!)
+├── .gitignore
+├── package.json
+├── remotion.config.ts
+└── README.md
+```
 
-## Environment Variables
+## 🔐 Environment Variables
 
-Required for paid TTS providers:
+For cloud TTS providers, add to `.env` file in your project:
 
 ```bash
 # Google Cloud TTS
 GOOGLE_TTS_API_KEY=your-google-api-key
 
-# Azure TTS  
+# Azure TTS
 AZURE_TTS_API_KEY=your-azure-key
 AZURE_TTS_REGION=eastus
 
@@ -377,49 +287,58 @@ AZURE_TTS_REGION=eastus
 ELEVENLABS_API_KEY=your-elevenlabs-key
 ```
 
-Add to `.env` file in project root or export in terminal.
+**⚠️ Security**: Never commit `.env` files to git! They're automatically ignored.
 
-## File Structure
+## 📖 Additional Resources
 
-Typical Remotion Video Studio project:
+### Remotion Documentation
+- [Official Docs](https://remotion.dev/docs)
+- [API Reference](https://remotion.dev/docs/api)
+- [Examples](https://remotion.dev/showcase)
+- [Discord Community](https://remotion.dev/discord)
 
-```
-my-video-project/
-├── .claude/
-│   ├── video-config.json    # Your preferences
-│   └── CLAUDE.md             # Remotion context
-├── public/
-│   ├── audio/                # Generated TTS files
-│   ├── recordings/           # Screen recordings
-│   └── assets/               # Images, music, etc.
-├── src/
-│   ├── Root.tsx              # Main composition
-│   ├── Composition.tsx       # Video composition
-│   ├── scenes/
-│   │   ├── Intro.tsx
-│   │   ├── Main.tsx
-│   │   └── Outro.tsx
-│   ├── components/
-│   │   ├── Title.tsx
-│   │   ├── Text.tsx
-│   │   └── Transition.tsx
-│   └── utils/
-│       ├── audio-sync.ts     # Timing utilities
-│       └── tts-[provider].ts # TTS integration
-├── .env                      # API keys (git-ignored)
-├── package.json
-└── remotion.config.ts        # Remotion settings
-```
+### TTS Provider Documentation
+- [Google Cloud TTS](https://cloud.google.com/text-to-speech/docs)
+- [Azure TTS](https://learn.microsoft.com/azure/cognitive-services/speech-service/)
+- [ElevenLabs API](https://elevenlabs.io/docs)
 
-## Additional Resources
+### Plugin Resources
+- [GitHub Repository](https://github.com/cnadiminti/remotion-video-studio)
+- [Report Issues](https://github.com/cnadiminti/remotion-video-studio/issues)
+- [Discussions](https://github.com/cnadiminti/remotion-video-studio/discussions)
 
-- Remotion Documentation: https://remotion.dev
-- Remotion Examples: https://remotion.dev/showcase
-- TTS Provider Docs:
-  - Google: https://cloud.google.com/text-to-speech
-  - Azure: https://azure.microsoft.com/services/cognitive-services/text-to-speech
-  - ElevenLabs: https://elevenlabs.io/docs
+## 🎓 Learning Path
+
+### Beginner (Your First Video)
+1. Run `/video-setup` and choose Mac TTS
+2. Create simple video: `/video-new "Hello world"`
+3. Add voice: `/video-add-voice "Hello from my first video"`
+4. Preview: `npm run dev`
+5. Render: `/video-render`
+
+### Intermediate (Professional Videos)
+1. Set up Google Cloud TTS for better quality
+2. Create branded videos with custom colors/fonts
+3. Use multiple scenes for complex narratives
+4. Add background music and effects
+5. Optimize rendering settings
+
+### Advanced (Production Workflow)
+1. Set up ElevenLabs voice cloning
+2. Create reusable templates
+3. Automate video generation with scripts
+4. Integrate with CI/CD pipelines
+5. Build custom Remotion components
+
+## ❓ Need More Help?
+
+- **Check documentation**: All commands have detailed specs in `commands/` directory
+- **Read skills**: Deep technical knowledge in `skills/` directory
+- **Use the agent**: Ask questions to the video-creator agent for guidance
+- **Report issues**: [GitHub Issues](https://github.com/cnadiminti/remotion-video-studio/issues)
 
 ---
 
-Need more help? Run `/video-help [topic]` for detailed information on specific topics.
+**Plugin Version**: 1.0.0
+**Status**: Production Ready
+**Made with ❤️ for the Claude Code community**

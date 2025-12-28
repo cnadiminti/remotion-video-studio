@@ -1,55 +1,48 @@
 # Dependencies
 node_modules/
-
-# Build outputs
-dist/
-out/
-build/
-
-# Remotion outputs
-.remotion/
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-._*
-
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Linux
-*~
-
-# Logs
-logs/
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Generated media (uncomment if you want to ignore these)
-# public/audio/
-# public/recordings/
+# Build outputs
+dist/
+build/
+out/
+*.tsbuildinfo
 
-# Local Claude Code config (may contain API key references)
-.claude/video-config.json
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS files
+Thumbs.db
+Desktop.ini
 
 # Temporary files
 tmp/
 temp/
 *.tmp
+
+# Log files
+logs/
+*.log
+
+# Plugin-specific
+.claude/*.local.md
+/.claude/video-config.json
+
+# Test/example projects (not part of plugin)
+my-first-video/
+my-new-recorder-project/
+recorder-studio/

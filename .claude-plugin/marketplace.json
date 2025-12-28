@@ -1,0 +1,41 @@
+{
+  "name": "remotion-video-studio",
+  "owner": {
+    "name": "cnadiminti"
+  },
+  "plugins": [
+    {
+      "name": "remotion-video-studio",
+      "version": "1.0.0",
+      "description": "Production-ready video creation toolkit for Remotion with multi-provider TTS, screen recording, and AI-powered workflows",
+      "source": "./",
+      "tags": [
+        "production-ready",
+        "remotion",
+        "video-creation",
+        "tts",
+        "text-to-speech",
+        "screen-recording",
+        "content-creation",
+        "marketing",
+        "tutorial",
+        "social-media"
+      ],
+      "homepage": "https://github.com/cnadiminti/remotion-video-studio#readme",
+      "license": "MIT",
+      "keywords": [
+        "remotion",
+        "video",
+        "tts",
+        "mac-tts",
+        "google-cloud-tts",
+        "azure-tts",
+        "elevenlabs",
+        "video-editing",
+        "voiceover",
+        "animation",
+        "remotion-recorder"
+      ]
+    }
+  ]
+}
